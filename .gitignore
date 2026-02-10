@@ -20,7 +20,7 @@ logs/
 output/
 *.docx
 *.pdf
-*.txt
+output/*.txt
 
 # Video/Recording guides (private)
 VIDEO_RECORDING_GUIDE.txt

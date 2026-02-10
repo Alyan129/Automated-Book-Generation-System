@@ -1,0 +1,19 @@
+# Core Dependencies
+google-generativeai>=0.3.0
+supabase>=2.0.0
+python-dotenv>=1.0.0
+
+# Document Generation
+python-docx>=1.0.0
+reportlab>=4.0.0
+
+# Data Processing
+pandas>=2.0.0
+openpyxl>=3.1.0
+
+# Notifications
+requests>=2.31.0
+
+# Utilities
+pydantic>=2.0.0
+loguru>=0.7.0
