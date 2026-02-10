@@ -1,16 +1,4 @@
 -- ============================================
--- FINAL SUPABASE DATABASE SCHEMA
--- Complete Interactive Book Generation System
--- Run this in your Supabase SQL Editor
--- ============================================
-
--- Drop existing tables if you want to start fresh (OPTIONAL - COMMENT OUT if you want to keep existing data)
--- DROP TABLE IF EXISTS final_state CASCADE;
--- DROP TABLE IF EXISTS chapters CASCADE;
--- DROP TABLE IF EXISTS outlines CASCADE;
--- DROP TABLE IF EXISTS books CASCADE;
-
--- ============================================
 -- 1. BOOKS TABLE
 -- Stores book metadata
 -- ============================================
@@ -140,22 +128,6 @@ CREATE INDEX IF NOT EXISTS idx_final_state_book_id ON final_state(book_id);
 UPDATE chapters SET status = 'pending' WHERE status IS NULL;
 UPDATE outlines SET status = 'pending' WHERE status IS NULL;
 UPDATE final_state SET output_status = 'pending' WHERE output_status IS NULL;
-
--- ============================================
--- ENABLE ROW LEVEL SECURITY (RLS) - Optional
--- Uncomment if you want to enable RLS
--- ============================================
--- ALTER TABLE books ENABLE ROW LEVEL SECURITY;
--- ALTER TABLE outlines ENABLE ROW LEVEL SECURITY;
--- ALTER TABLE chapters ENABLE ROW LEVEL SECURITY;
--- ALTER TABLE final_state ENABLE ROW LEVEL SECURITY;
-
--- CREATE POLICY "Enable read access for all users" ON books FOR SELECT USING (true);
--- CREATE POLICY "Enable insert for all users" ON books FOR INSERT WITH CHECK (true);
--- CREATE POLICY "Enable update for all users" ON books FOR UPDATE USING (true);
--- CREATE POLICY "Enable delete for all users" ON books FOR DELETE USING (true);
-
--- (Repeat for other tables if needed)
 
 -- ============================================
 -- TABLE COMMENTS (Documentation)
